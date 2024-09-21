@@ -1,6 +1,6 @@
 const userModel = require("../models/user");
 const bcrypt = require("bcrypt");
-
+const jwt=require("jsonwebtoken")
 // Signup functionality
 const signup = async (req, res) => {
     try {
@@ -41,7 +41,7 @@ const login = async (req, res) => {
             }
             const passCheck=bcrypt.compare(password,user.password)
             if(!passCheck){
-                
+
             }
 
         }
